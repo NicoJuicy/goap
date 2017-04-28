@@ -1,4 +1,4 @@
-import * as Phaser from "../../libs/phaser.js";
+//import * as Phaser from "../../libs/phaser.js";
 
 class MovingState
 {

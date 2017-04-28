@@ -33707,7 +33707,6 @@
                 }
                 return newSet;
             }
-            return null;
         },
         createFromObjects: function (name, gid, key, frame, exists, autoCull, group, CustomClass, adjustY) {
             if (typeof exists === 'undefined') {

@@ -83474,7 +83474,7 @@ Phaser.Tilemap.prototype = {
 
         }
 
-        return null;
+       // return null;
 
     },
 

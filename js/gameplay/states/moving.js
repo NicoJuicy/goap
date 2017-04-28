@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var Phaser = require("../../libs/phaser.js");
 var MovingState = (function () {
     function MovingState(entity) {
         this._entity = entity;
