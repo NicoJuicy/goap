@@ -1,3 +1,0 @@
-ToolsDeposit = {
-    PickAxe: 0
-};
