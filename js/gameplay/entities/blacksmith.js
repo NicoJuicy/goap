@@ -13,7 +13,7 @@ var Blacksmith = (function (_super) {
     function Blacksmith(game, options) {
         var _this = _super.call(this, "BlackSmith") || this;
         _this._game = game;
-        _this._sprite = _this._game.add.sprite(options.x, options.y, "miner");
+        _this._sprite = _this._game.add.sprite(options.x, options.y, "blacksmith");
         _this._game.physics.arcade.enable(_this._sprite);
         _this._current_plan = [];
         _this._target = null;

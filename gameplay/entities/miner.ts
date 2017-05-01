@@ -27,12 +27,12 @@ class Miner extends Agent{
     plan(){
         var planner = new Planner();
 
-    var plan = planner.plan(this, {
-        name: "HasOre",
-        value: true
-    });
+        var plan = planner.plan(this, {
+            name: "HasOre",
+            value: true
+        });
 
-    return plan;
+        return plan;
     }
 }
 

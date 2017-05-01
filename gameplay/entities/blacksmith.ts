@@ -11,13 +11,13 @@ class Blacksmith extends Agent
          super("BlackSmith");
 
         this._game = game;
-        this._sprite = this._game.add.sprite(options.x, options.y,"miner");
+        this._sprite = this._game.add.sprite(options.x, options.y,"blacksmith");
         this._game.physics.arcade.enable(this._sprite);
 
         this._current_plan = [];
         this._target = null;
 
-         this.setState("HasOre", false);
+        this.setState("HasOre", false);
         this.setState("HasTool", false);
 
         this.addAction(new CraftToolAction());

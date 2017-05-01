@@ -12,7 +12,8 @@ var GetOreAction = (function (_super) {
     __extends(GetOreAction, _super);
     function GetOreAction() {
         var _this = _super.call(this, "GetOre", 1) || this;
-        _this.addEffect("Hasore", true);
+        _this._position = positions.material_depot;
+        _this.addEffect("HasOre", true);
         return _this;
     }
     GetOreAction.prototype.canExecute = function () {

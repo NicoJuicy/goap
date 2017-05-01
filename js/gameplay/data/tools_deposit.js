@@ -1,3 +1,3 @@
 var ToolsDeposit = {
-    PickAxe: 0
+    PickAxe: 1
 };

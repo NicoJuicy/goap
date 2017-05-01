@@ -10,6 +10,9 @@ class Planner
         var found = this._buildGraph(root, leaves, agent.actions, goal);
 
         //should sort by int instead of any
+        var sortedLeaves = leaves.sort(a  => a.cost);
+        //console.log(sortedLeaves);
+        var cheapest = sortedLeaves[0];
         var cheapest = leaves.sort((a,b) :any => a.cost < b.cost)[0];
 
         //  var cheapest = leaves.sort(function(a, b) {
