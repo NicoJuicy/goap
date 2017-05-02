@@ -1,5 +1,5 @@
 
-class ActionState
+class ActionState implements IActionState
 {
     _entity:any;
     _waiting:boolean;

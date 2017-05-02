@@ -1,6 +1,6 @@
 //import * as Phaser from "../../libs/phaser.js";
 
-class MovingState
+class MovingState implements IActionState
 {
     _entity:any;
 
@@ -16,9 +16,11 @@ class MovingState
         this._entity._target = this._entity._current_plan[0]._position;
         this._entity._sprite.body.moves = true;
     }
+
     leave(){
         console.log(this._entity.name + " leaves Moveing state");
     }
+    
     update(){
         if(this._entity._target) {
             var t =  this._entity._target;

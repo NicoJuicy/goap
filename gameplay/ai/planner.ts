@@ -1,28 +1,28 @@
 class Planner
 {
 
-    plan(agent:any,goal:any)
+    plan(agent:Agent,goal:any) : Array<Action>
     {
-       var root = new NodeT(undefined, undefined, 0, agent.state);
+        let root : NodeT = new NodeT(undefined, undefined, 0, agent.state);
+        //var leaves = [];
+        let leaves: Array<NodeT> = [];
 
-        var leaves = [];
-
-        var found = this._buildGraph(root, leaves, agent.actions, goal);
+        let found:boolean = this._buildGraph(root, leaves, agent.actions, goal);
 
         //should sort by int instead of any
-        var sortedLeaves = leaves.sort(a  => a.cost);
+        let sortedLeaves : Array<NodeT> = leaves.sort(a  => a.cost);
         //console.log(sortedLeaves);
-        var cheapest = sortedLeaves[0];
-        var cheapest = leaves.sort((a,b) :any => a.cost < b.cost)[0];
+        let cheapest :NodeT = sortedLeaves[0];
+         cheapest  = leaves.sort((a,b) :any => a.cost < b.cost)[0];
 
         //  var cheapest = leaves.sort(function(a, b) {
         //     return a.cost < b.cost;
         // })[0];
 
 
-        var plan = [];
+        let plan : Array<Action> = [];
 
-        var node = cheapest;
+        let node : NodeT = cheapest;
 
         while(node) {
             if(node.action) {
@@ -39,8 +39,8 @@ class Planner
     }
 
     
-    _buildGraph = function(parent:any, leaves:any, actions:any, goal:any) {
-        var foundOne = false;
+    _buildGraph = function(parent:NodeT, leaves:Array<NodeT>, actions:Array<Action>, goal:any) : boolean {
+        let foundOne : boolean = false;
 
         var that = this;
 
@@ -68,7 +68,8 @@ class Planner
 
         return foundOne;
     };
-    _inState = function(state:any, preconditions:any) {
+    
+    _inState = function(state:any, preconditions:any) : boolean {
         var clear = true;
         for(var cond in preconditions) {
             clear = clear && (state[cond] == preconditions[cond]);

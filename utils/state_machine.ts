@@ -1,16 +1,16 @@
 // Every object that offers the following methods can be used as a State:
 // enter, leave, update
-/*
+
 class StateMachine{
     states:any;
-    current:any;
+    current:IActionState;
 
     constructor(){
         this.states = {};
         this.current = null;
     }
 
-    add(name:any,state:any)
+    add(name:any,state:IActionState)
     {
          this.states[name] = state;
     }
@@ -31,8 +31,8 @@ class StateMachine{
             this.current.update();
         }
     }
-}*/
-
+}
+/*
 var StateMachine = function() {
     this.states = {};
     this.current = null;
@@ -56,3 +56,4 @@ StateMachine.prototype.update = function() {
         this.current.update();
     }
 }
+*/

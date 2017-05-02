@@ -1,11 +1,11 @@
 class NodeT
 {
-    parent:any;
-    action:any;
+    parent:NodeT;
+    action:Action;
     cost:number;
     state : any;
 
-    constructor(parent:any,action:any,cost:number,state:any)
+    constructor(parent:NodeT,action:Action,cost:number,state:any)
     {
         this.parent = parent;
         this.action = action;

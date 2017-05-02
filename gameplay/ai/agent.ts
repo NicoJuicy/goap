@@ -1,8 +1,8 @@
 class Agent
 {
     name :string;
-    actions : any;
-    currentActions : any;
+    actions : Array<Action>;
+    currentActions : Array<Action>;
     state : any;
     sm :any;
 
@@ -27,13 +27,13 @@ class Agent
         this.sm.update();
     }
 
-    addAction(action:any)
+    addAction(action:Action)
     {
         action.agent = this;
         this.actions.push(action);
     }
 
-    applyAction(action:any)
+    applyAction(action:Action)
     {
         for(var effect in action.effects) {
             this.setState(effect, action.effects[effect]);
@@ -45,11 +45,11 @@ class Agent
         this.state[name] = value;
     };
 
-    is = function(name:string, value:string) {
+    is = function(name:string, value:string) : boolean {
         return this.state[name] == value;
     };
 
-    getUsableActions() {
+    getUsableActions() : Array<Action> {
         // get all actions with cleared preconditions
         return this.actions.filter(function(action) {
             return action.canExecute();

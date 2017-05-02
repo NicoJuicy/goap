@@ -37,7 +37,7 @@ var Planner = (function () {
         var found = this._buildGraph(root, leaves, agent.actions, goal);
         var sortedLeaves = leaves.sort(function (a) { return a.cost; });
         var cheapest = sortedLeaves[0];
-        var cheapest = leaves.sort(function (a, b) { return a.cost < b.cost; })[0];
+        cheapest = leaves.sort(function (a, b) { return a.cost < b.cost; })[0];
         var plan = [];
         var node = cheapest;
         while (node) {

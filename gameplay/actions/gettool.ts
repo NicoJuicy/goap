@@ -11,7 +11,7 @@ class GetToolAction extends Action{
         this._position=positions.tool_deposit;
     }
 
-    canExecute()
+    canExecute() : boolean
     {
          return ToolsDeposit.PickAxe > 0;
     }

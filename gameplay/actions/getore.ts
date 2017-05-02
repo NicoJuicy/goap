@@ -8,7 +8,7 @@ class GetOreAction extends Action{
         this.addEffect("HasOre",true);
     }
 
-    canExecute()
+    canExecute() : boolean
     {
         return MaterialStorage.Ore > 0;
     }

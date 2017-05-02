@@ -1,4 +1,4 @@
-class IdleState
+class IdleState implements IActionState
 {
     _entity:any;
 

@@ -2,7 +2,7 @@ class Action
 {
     name : string;
     cost : number;
-    agent:any;
+    agent:Agent;
     effects : any;
     preconditions : any;
     
@@ -30,7 +30,7 @@ class Action
          console.warn(this.name + ": You might want to override execute for me :P");
     }
 
-    canExecute()
+    canExecute() : boolean
     {
         return true;
     }
