@@ -31,10 +31,4 @@ class MineOreAction extends Action
             this._mineCounter = 0;
         }
     }
-
-
-
 };
-
-//MineOreAction.prototype = Object.create(Action.prototype);
-
